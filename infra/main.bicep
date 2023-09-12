@@ -73,7 +73,7 @@ module openAI 'br/public:ai/cognitiveservices:1.1.1' = {
   }
 }
 
-module searchService 'core/search/search-service.bicep' = {
+module searchService 'br/public:search/search-service:1.0.1' = {
   name: 'search-service'
   scope: group
   params: {
