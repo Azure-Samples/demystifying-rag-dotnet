@@ -3,3 +3,16 @@
 name: azd-starter-azure-openai
 metadata:
   template: azd-starter-azure-openai@0.0.1-beta
+
+hooks:
+  postprovision:
+    posix: 
+      shell: sh
+      run: azd env get-values | grep -i 'ENDPOINT'
+      interactive: true
+      continueOnError: true
+    windows:
+      shell: pwsh
+      run: azd env get-values | Where-Object { $_ -match "ENDPOINT" }
+      interactive: true
+      continueOnError: true
