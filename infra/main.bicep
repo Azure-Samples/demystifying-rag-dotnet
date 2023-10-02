@@ -70,7 +70,7 @@ module searchService 'br/public:search/search-service:1.0.1' = {
     location: location
     tags: tags
     sku: {
-      name: 'standard'
+      name: 'free'
     }
   }
 }
